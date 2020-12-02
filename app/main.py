@@ -1,6 +1,8 @@
 from typing import Optional, List, Any
 import asyncio
 import json
+import sys
+sys.path.append("/app/")
 
 from bson import ObjectId
 from fastapi import FastAPI, Query

@@ -33,7 +33,7 @@ def aggregate_features(collection, feature="color_normalname", brands: List = []
         {
             "$group": {
                 "_id": {"$toLower": f'${feature}'},
-                "count": {"$sum": {"$cond": [{"$and": [filters]}, 1, 0]}}
+                "count": {"$sum": {"$cond": [{"$and": filters}, 1, 0]}}
             }
         },
         {
