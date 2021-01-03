@@ -1,5 +1,5 @@
 # pendulum-api
-backend for the website frontend
+Backend API for the single page react user website
 
 
 ### Run fastapi server:
