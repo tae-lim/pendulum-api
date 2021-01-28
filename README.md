@@ -11,8 +11,14 @@ Backend API for the single page react user website
     - development env:
          - link local development directory
          - use hot-reload script
+    
+    First build the image:
     ```bash
-    docker run -d -p 80:80 -v $(pwd)/app:/app/app pendulum_api /start-reload.sh
+    docker build -t pendulum_api:0.01 ./
+    ```
+    Then run the container:
+    ```bash
+    docker run --name pendulum_api -it -p 80:80 -v $(pwd)/app:/app/app -v ~/.aws/:/root/.aws:ro pendulum_api:0.0.1 /start-reload.sh
     ```
     - production env:
     ```bash
