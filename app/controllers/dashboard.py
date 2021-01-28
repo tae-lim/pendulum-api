@@ -53,6 +53,7 @@ class Dashboard:
                                                                                vendors=self._vendors,
                                                                                start_date=self._start_date,
                                                                                end_date=self._end_date)
+
         color_count, top_colors_aggr = aggregate_features(collection,
                                                           feature=c.COLOR_VAR_NAME,
                                                           brands=self._brands,
@@ -63,7 +64,7 @@ class Dashboard:
         product_assortment = [
             {"name": x[c.PRODUCT_SUBCATEGORY_0],
              "percentage": round(x["count"] / product_assortment_count, 2) * 100
-             } for x in product_assortment_aggr[:c.NUMBER_TOP_SUBCATEGORIES_DASHBOARD]]
+             } for x in product_assortment_aggr]
 
         top_colors = [
             {"name": x[c.COLOR_VAR_NAME],

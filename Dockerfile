@@ -1,5 +1,5 @@
 # https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker
-# docker build -t pendulum_api ./
+# docker build -t pendulum_api:0.01 ./
 # docker run -d --name pendulum_api -p 80:80 pendulum_api
 # docker run -d -p 80:80 -v $(pwd)/app:/app/app pendulum_api /start-reload.sh  # for development
 
